@@ -4,6 +4,7 @@ import './App.css';
 import {Router, Route, NavLink, Switch} from 'react-router-dom';
 import createBrowserHistory from "history/createBrowserHistory";
 
+import TopMenu from "./components/TopMenu";
 import Groups from "./components/Groups";
 import Coming from "./components/Coming";
 import Products from "./components/Products";
@@ -16,7 +17,7 @@ class App extends Component {
       <Router history={createBrowserHistory()}>
         <div id='main-wrap'>
           <header>
-            header
+            <TopMenu/>
           </header>
           <main>
             <aside>
