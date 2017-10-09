@@ -1,3 +1,7 @@
+#style-root-animate {
+  height: 100%;
+}
+
 #main-wrap {
   height: 100%;
 }
@@ -40,11 +44,11 @@ nav ul li .active, nav ul li .active:hover {
 }
 
 main .content {
-  width: 80%;
+  width: 78%;
   display: inline-block;
   height: 100%;
   float: right;
-  padding: 30px 0 0 5%;
+  padding: 30px 2% 0 5%;
   box-shadow: inset 20px 20px 10px -5px rgba(0,0,0,0.03);
   border-top: 1px solid #E0E0E0; 
 }
