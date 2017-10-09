@@ -7,18 +7,21 @@ let day = ["Воскресенье", "Понедельник", "Вторник",
 export default class TopMenu extends Component {
 	constructor(props) {
 		super(props);
+
 		this.state = {	
 			time: "",
 			day: ""
 		}
+
+		this.clock();
 	}
 
-	componentWillMount(){
+	clock() {
 		let plusZero = (data)=>{
 			if(data < 10) data = "0"+data;
 			return data;
 		}
-		setInterval(() => {
+		setInterval(()=>{
 			this.setState({
 				time: `${plusZero(new Date().getDate())} ${month[new Date().getMonth()]}, ${new Date().getFullYear()} (${plusZero(new Date().getHours())}:${plusZero(new Date().getMinutes())}:${plusZero(new Date().getSeconds())})`,
 				day: day[new Date().getDay()]
