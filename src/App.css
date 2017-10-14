@@ -27,6 +27,9 @@ main aside {
 nav ul {
   list-style-type: none;
 }
+nav ul li a {
+  color: rgb(15, 91, 114);
+}
 nav ul li a:hover, nav ul li a:focus, nav ul li a {
   text-decoration: none;
 }

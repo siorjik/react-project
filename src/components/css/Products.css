@@ -18,15 +18,23 @@ select {
 	padding: 10px 1%;
 	margin-bottom: 10px;
 	border-radius: 5px;
-	cursor: pointer;
+	/*cursor: pointer;*/
 	width: 95%;
 }
-.products-cont:hover {
+/*.products-cont:hover {
 	box-shadow: 0 0 10px rgba(0,0,0,0.5)
-}
+}*/
 
 .products-cont span {
 	display: inline-block;
 	width: 19%;
 	text-align: center;
+}
+.products-cont .recicle {
+	display: inline-block;
+	width: 2%;
+}
+.products-cont .recicle img {
+	width: 100%;
+	cursor: pointer;
 }

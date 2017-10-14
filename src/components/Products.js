@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {products} from "./Orders";
+import {products} from "./../backend/data.js";
 import Radium, {StyleRoot} from 'radium';
 import {bounceInUp} from 'react-animations';
 import './css/Products.css';
@@ -24,11 +24,11 @@ export default class Products extends Component {
 	getType() {
 		let arrTypes = new Set();
 		let resArrTypes = [], ind = 0;
-		products.forEach((item) => {
+		products.forEach((item)=>{
 		  arrTypes.add(item.type);
 		});
 
-		arrTypes.forEach((val) => {
+		arrTypes.forEach((val)=>{
 			resArrTypes[ind] = val;
 			ind++;
 		});
@@ -47,19 +47,25 @@ export default class Products extends Component {
 		else this.setState({products: result});
 	}
 
+	deleteProduct(index) {
+		this.state.products.splice(index, 1);
+		this.setState({products: this.state.products});
+	}
+
 	render() {
 		let types = this.getType();
 		return (
 			<StyleRoot id="prod-wrap">
 	      <div style={styles.bounceInUp}>
+	      	<span>Тип: </span>
 		      <select value={this.state.typeVal} onChange={this.changeType.bind(this)}>
 		    		<option value="all">All types</option>
-		    		{types.map((item, index) => {
+		    		{types.map((item, index)=>{
 		    			return <option key={index} value={item.toLowerCase()}>{item}</option>
 		    		})}
 			    </select>
 	      	{this.state.products.map((item, index)=>{
-	        	return <p key={item.id} className='products-cont'><span>Название:<br/>{item.title}</span> <span>Тип:<br/>{item.type}</span> <span>Гарантия:<br/>от {item.guarantee.start}<br/>до {item.guarantee.end}</span> <span>Цена(USD): {item.price[0].value}<br/>Цена(UAH): {item.price[1].value}</span> <span>Приход:<br/>{item.order}</span></p>
+	        	return <p key={item.id} className='products-cont'><span>Название:<br/>{item.title}</span> <span>Тип:<br/>{item.type}</span> <span>Гарантия:<br/>от {item.guarantee.start}<br/>до {item.guarantee.end}</span> <span>Цена(USD): {item.price[0].value}<br/>Цена(UAH): {item.price[1].value}</span> <span>Приход:<br/>{item.order}</span> <span className='recicle'><img src={require("./../img/rbin.png")} alt="rbin" onClick={this.deleteProduct.bind(this, index)}/></span></p>
 	        })}
 	      </div>
       </StyleRoot>
