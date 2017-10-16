@@ -6,6 +6,7 @@ import './css/Orders.css';
 import recicle from './../img/rbin.png';
 //import axios from 'axios';
 //import check from './../backend/check.php';
+import _ from 'lodash';
 
 import {orders, products} from './../backend/data.js'
 
@@ -19,7 +20,6 @@ let styles = {
 export default class Orders extends Component {
 	constructor(props) {
 		super(props);
-
 		this.state = {
 			item: "",
 			display: "none",
@@ -104,10 +104,10 @@ export default class Orders extends Component {
 		);
 	}
 
-	deleteOrder(index, ev) {
-		this.state.orders.splice(index, 1);
+	deleteOrder(item) {
+		let arr = _.without(this.state.orders, item);
 		this.setState({
-			orders: this.state.orders,
+			orders: arr,
 			display: "none"
 		});
   }
@@ -144,7 +144,7 @@ export default class Orders extends Component {
 	      <div style={styles.bounceInUp}>
 	      	<h3 className='orders-count'>Приходы / {this.state.orders.length}</h3>
 	      	{this.state.orders.map((item, index)=>{
-	      		return <p className='order'key={item.id} onClick={this.showOrderDesc.bind(this, item, index)}><span className='order-title'>{item.title}</span> <span className='count-produts'>{item.getProducts().length}<br/>Продукта</span> <span className='date'>{item.date}</span> <span className='sum-order'>{this.getSums(item).usdSum} (USD)<br/>{this.getSums(item).uahSum} (UAH)</span> <span className='recicle'><img src={recicle} alt="rbin" onClick={this.deleteOrder.bind(this, index)}/></span></p>
+	      		return <p className='order'key={item.id} onClick={this.showOrderDesc.bind(this, item, index)}><span className='order-title'>{item.title}</span> <span className='count-produts'>{item.getProducts().length}<br/>Продукта</span> <span className='date'>{item.date}</span> <span className='sum-order'>{this.getSums(item).usdSum} (USD)<br/>{this.getSums(item).uahSum} (UAH)</span> <span className='recicle'><img src={recicle} alt="rbin" onClick={this.deleteOrder.bind(this, item)}/></span></p>
 	      	})}
 	      	{orderDesc}
 	      </div>

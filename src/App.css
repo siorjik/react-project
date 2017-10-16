@@ -48,7 +48,6 @@ nav ul li .active, nav ul li .active:hover {
 
 main .content {
   width: 78%;
-  display: inline-block;
   height: 100%;
   float: right;
   padding: 30px 2% 0 5%;

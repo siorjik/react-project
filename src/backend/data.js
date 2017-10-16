@@ -139,6 +139,33 @@ export let products = [
   }
 ];
 
+export let users = [
+  {
+    id: 1,
+    name: "Иван Усачев",
+    login: "vanyaus",
+    password: 'ivan123',
+    email: "kaplun.serj@ukr.net",
+    position: "приемщик"
+  },
+  {
+    id: 2,
+    name: "Филипп Котов",
+    login: "phill",
+    password: 'pholl123',
+    email: "kaplun.serj@ukr.net",
+    position: "товаровед"
+  },
+  {
+    id: 3,
+    name: "Петр Кисляк",
+    login: "petya",
+    password: 'petya123',
+    email: "kaplun.serj@ukr.net",
+    position: "бухгалтер"
+  }
+];
+
 function getProducts() {
 	let arrProds = [];
 	for(let i = 0; i < products.length; i++) {
