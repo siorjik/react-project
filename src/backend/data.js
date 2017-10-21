@@ -152,7 +152,7 @@ export let users = [
     id: 2,
     name: "Филипп Котов",
     login: "phill",
-    password: 'pholl123',
+    password: 'phill123',
     email: "kaplun.serj@ukr.net",
     position: "товаровед"
   },

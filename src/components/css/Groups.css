@@ -1,0 +1,71 @@
+.orders-count {
+	margin-bottom: 30px;
+}
+
+.group {
+	border: 1px solid #E0E0E0;
+	padding: 10px 1%;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	width: 50%;
+}
+.group:hover {
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.group .order-title {
+	display: inline-block;
+	width: 23%;
+}
+.group .count-produts {
+	display: inline-block;
+	width: 23%;
+}
+.group .date {
+	display: inline-block;
+	width: 23%;
+}
+.group .sum-order {
+	display: inline-block;
+	width: 23%;
+}
+.group .recicle {
+	display: inline-block;
+	width: 3.5%;
+}
+.group .recicle img {
+	width: 100%;
+}
+
+.order-descript {
+	top: 150px;
+  position: absolute;
+  right: 3%;
+  background: beige;
+  width: 30%;
+  border-radius: 5px;
+  height: 75%;
+}
+.order-descript .close-but {
+	border: 1px solid grey;
+  position: absolute;
+  left: 97%;
+  bottom: 470px;
+  background: white;
+  border-radius: 30px;
+  padding: 1% 2%;
+  cursor: pointer;
+  z-index: 10;
+}
+.order-descript .close-but:hover {
+	background: red;
+}
+
+.order-descript .cont {
+	overflow: auto;
+	height: 96%;
+	padding: 10px;
+}
+
+
+
