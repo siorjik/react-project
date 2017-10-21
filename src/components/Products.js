@@ -64,7 +64,7 @@ export default class Products extends Component {
 		    		})}
 			    </select>
 	      	{this.state.products.map((item, index)=>{
-	        	return <p key={item.id} className='products-cont'><span>Название:<br/>{item.title}</span> <span>Тип:<br/>{item.type}</span> <span>Гарантия:<br/>от {item.guarantee.start}<br/>до {item.guarantee.end}</span> <span>Цена(USD): {item.price[0].value}<br/>Цена(UAH): {item.price[1].value}</span> <span>Приход:<br/>{item.order}</span> <span className='recicle'><img src={require("./../img/rbin.png")} alt="rbin" onClick={this.deleteProduct.bind(this, index)}/></span></p>
+	        	return <p key={item.id} className='products-cont'><span>Название:<br/>{item.title}</span> <span>Тип:<br/>{item.type}</span> <span>Гарантия:<br/>от {item.guarantee.start}<br/>до {item.guarantee.end}</span> <span>Цена(USD): {item.price[0].value}<br/>Цена(UAH): {item.price[1].value}</span> <span>Приход:<br/>{item.order}</span> <span className='recicle'><img src={require("./../img/rbin.png")} alt="rbin" title="удалить" onClick={this.deleteProduct.bind(this, index)}/></span></p>
 	        })}
 	      </div>
       </StyleRoot>

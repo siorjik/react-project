@@ -39,7 +39,7 @@
 }
 
 .modal {
-	background: rgba(0,0,0,0.8);
+	background: rgba(0,0,0,0.5);
   position: absolute;
   left: 0;
   bottom: 0;
@@ -49,7 +49,7 @@
 .modal .close-modal {
 	border: 1px solid grey;
   position: absolute;
-  left: 59%;
+  left: 75%;
   bottom: 76%;
   background: white;
   border-radius: 30px;
@@ -64,10 +64,11 @@
 .modal form {
 	position: absolute;
   top: 20%;
-  left: 45%;
+  left: 35%;
   background: beige;
   padding: 25px;
   border-radius: 10px;
+  width: 40%;
 }
 .modal form p {
 	margin-bottom: 15px;
@@ -77,11 +78,15 @@
 	border-radius: 5px;
 	padding: 5px;
 }
-.modal form input[type='button'] {
+.modal form input {
+	width: 97%;
+}
+.modal form input[type='submit'] {
 	cursor: pointer;
 	background: white;
 	border-radius: 5px;
+	width: 30%;
 }
-.modal input[type='button']:hover {
+.modal input[type='submit']:hover {
 	background: bisque;
 }

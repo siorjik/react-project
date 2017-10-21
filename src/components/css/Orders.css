@@ -1,71 +1,76 @@
-.orders-count {
-	margin-bottom: 30px;
-}
-
 .order {
 	border: 1px solid #E0E0E0;
 	padding: 10px 1%;
 	margin-bottom: 10px;
 	border-radius: 5px;
-	cursor: pointer;
-	width: 50%;
-}
-.order:hover {
-	box-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-.order .order-title {
-	display: inline-block;
-	width: 23%;
-}
-.order .count-produts {
-	display: inline-block;
-	width: 23%;
-}
-.order .date {
-	display: inline-block;
-	width: 23%;
-}
-.order .sum-order {
-	display: inline-block;
-	width: 23%;
-}
-.order .recicle {
-	display: inline-block;
-	width: 3%;
-}
-.order .recicle img {
-	width: 100%;
+	width: 55%;
 }
 
-.order-descript {
-	top: 150px;
-  position: absolute;
-  right: 3%;
+.change-form {
+	position: absolute;
+  left: 70%;
+  top: 23%;
   background: beige;
-  width: 30%;
+  padding: 2%;
   border-radius: 5px;
-  height: 75%;
+  width: 20%;
 }
-.order-descript .close-but {
+.change-form .close-but {
 	border: 1px solid grey;
   position: absolute;
-  left: 97%;
-  bottom: 470px;
+  left: 95%;
+  bottom: 92%;
   background: white;
   border-radius: 30px;
   padding: 1% 2%;
   cursor: pointer;
   z-index: 10;
 }
-.order-descript .close-but:hover {
+.change-form .close-but:hover {
 	background: red;
 }
-
-.order-descript .cont {
-	overflow: auto;
-	height: 96%;
-	padding: 10px;
+.change-form form p {
+	margin-bottom: 15px;
+}
+.change-form form input {
+	border: none;
+	border-radius: 5px;
+	padding: 5px;
+}
+.change-form form input {
+	width: 97%;
+}
+.change-form form input[type='submit'] {
+	cursor: pointer;
+	background: white;
+	border-radius: 5px;
+	width: 30%;
+}
+.change-form form input[type='submit']:hover {
+	background: bisque;
 }
 
+.order span {
+	width: 29%;
+	display: inline-block;
+	text-align: center;
+}
 
+.order .editing {
+	display: inline-block;
+  width: 3%; 
+}
+.order .editing img {
+	width: 100%;
+	cursor: pointer;
+}
 
+.order .recicle {
+	display: inline-block;
+	width: 3%;
+	margin-left: 2%; 
+}
+.order .recicle img {
+	width: 100%;
+	cursor: pointer;
+}
