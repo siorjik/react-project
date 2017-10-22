@@ -1,3 +1,7 @@
+#style-root-animate {
+  height: 100%;
+}
+
 #main-wrap {
   height: 100%;
 }
@@ -23,6 +27,9 @@ main aside {
 nav ul {
   list-style-type: none;
 }
+nav ul li a {
+  color: rgb(15, 91, 114);
+}
 nav ul li a:hover, nav ul li a:focus, nav ul li a {
   text-decoration: none;
 }
@@ -40,11 +47,10 @@ nav ul li .active, nav ul li .active:hover {
 }
 
 main .content {
-  width: 80%;
-  display: inline-block;
+  width: 78%;
   height: 100%;
   float: right;
-  padding: 30px 0 0 5%;
+  padding: 30px 2% 0 5%;
   box-shadow: inset 20px 20px 10px -5px rgba(0,0,0,0.03);
   border-top: 1px solid #E0E0E0; 
 }

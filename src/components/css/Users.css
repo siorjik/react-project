@@ -1,0 +1,92 @@
+#user-wrap {
+	overflow: auto;
+	height: 98%;
+	padding: 5px;
+}
+
+.user-cont {
+	border: 1px solid #E0E0E0;
+	padding: 10px 1%;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	/*cursor: pointer;*/
+	width: 95%;
+}
+
+.user-cont span {
+	display: inline-block;
+	width: 22.5%;
+	text-align: center;
+}
+
+.user-cont .editing {
+	display: inline-block;
+  width: 2%; 
+}
+.user-cont .editing img {
+	width: 100%;
+	cursor: pointer;
+}
+
+.user-cont .recicle {
+	display: inline-block;
+	width: 2%;
+	margin-left: 2%; 
+}
+.user-cont .recicle img {
+	width: 100%;
+	cursor: pointer;
+}
+
+.modal {
+	background: rgba(0,0,0,0.5);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.modal .close-modal {
+	border: 1px solid grey;
+  position: absolute;
+  left: 75%;
+  bottom: 76%;
+  background: white;
+  border-radius: 30px;
+  padding: 0.15% 0.3%;
+  cursor: pointer;
+	z-index: 10;
+	font-size: 10px;
+}
+.modal .close-modal:hover {
+	background: red;
+}
+.modal form {
+	position: absolute;
+  top: 20%;
+  left: 35%;
+  background: beige;
+  padding: 25px;
+  border-radius: 10px;
+  width: 40%;
+}
+.modal form p {
+	margin-bottom: 15px;
+}
+.modal form input {
+	border: none;
+	border-radius: 5px;
+	padding: 5px;
+}
+.modal form input {
+	width: 97%;
+}
+.modal form input[type='submit'] {
+	cursor: pointer;
+	background: white;
+	border-radius: 5px;
+	width: 30%;
+}
+.modal input[type='submit']:hover {
+	background: bisque;
+}
